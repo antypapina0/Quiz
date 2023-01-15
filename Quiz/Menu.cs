@@ -75,7 +75,19 @@ namespace Quiz
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Sprawdzenie czy został wybrany poziom trudności
+            if (comboBox2.SelectedIndex == -1)
+            {
+                MessageBox.Show("Proszę wybrać poziom trudności!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            // Sprawdzenie czy została wybrana kategoria pytań
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Proszę wybrać kategorię pytań!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
         }
 
