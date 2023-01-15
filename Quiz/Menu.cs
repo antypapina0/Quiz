@@ -42,7 +42,9 @@ namespace Quiz
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            panel1.BackColor = Color.SteelBlue;
+            label1.BackColor = Color.SteelBlue;
+            label2.BackColor = Color.SteelBlue;
 
         }
 
@@ -54,12 +56,16 @@ namespace Quiz
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            panel1.BackColor = Color.CornflowerBlue;
+            label1.BackColor = Color.CornflowerBlue;
+            label2.BackColor = Color.CornflowerBlue;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            panel1.BackColor = Color.White;
+            label1.BackColor = Color.White;
+            label2.BackColor = Color.White;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,7 +75,19 @@ namespace Quiz
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Sprawdzenie czy został wybrany poziom trudności
+            if (comboBox2.SelectedIndex == -1)
+            {
+                MessageBox.Show("Proszę wybrać poziom trudności!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            // Sprawdzenie czy została wybrana kategoria pytań
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Proszę wybrać kategorię pytań!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
         }
 
