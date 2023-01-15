@@ -89,6 +89,12 @@ namespace Quiz
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Proszę wpisz swoje imię!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
         }
 
         private void button6_Click_1(object sender, EventArgs e)
